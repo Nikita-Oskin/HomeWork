@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 namespace pcshop_wpf
 {
     /// <summary>
-    /// Логика взаимодействия для SSDDrivers.xaml
+    /// Interaction logic for SSDDrivers.xaml
     /// </summary>
     public partial class SSDDrivers : Window
     {
