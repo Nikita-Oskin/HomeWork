@@ -119,7 +119,6 @@ namespace Block2_1
                 comparer = new ReverseComparer<TKey>(comparer);
             }
 
-            // Copy to a local variable so we don't need to capture "this"
             Func<TElement, TCompositeKey> primarySelector = compositeSelector;
             Func<TElement, CompositeKey<TCompositeKey, TKey>> newKeySelector =
                 element => new CompositeKey<TCompositeKey, TKey>(primarySelector(element), keySelector(element));
@@ -187,8 +186,6 @@ namespace Block2_1
         }
         public IEnumerator<TElement> GetEnumerator()
         {
-            // First copy the elements into an array: don't bother with a list, as we
-            // want to use arrays for all the swapping around.
             int count;
             TElement[] data = source.ToBuffer(out count);
 
@@ -215,7 +212,6 @@ namespace Block2_1
                 int right = leftRight.right;
                 if (right > left)
                 {
-                    // Note: not just (left + right) / 2 in order to avoid a common bug: http://goo.gl/d4d4
                     int pivot = left + (right - left) / 2;
                     int pivotPosition = Partition(indexes, keys, left, right, pivot);
                     // Push the right sublist first, so that we *pop* the
