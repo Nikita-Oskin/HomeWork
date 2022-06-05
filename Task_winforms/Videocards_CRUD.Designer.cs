@@ -23,10 +23,6 @@ namespace pcshop
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.lbl_cpu_graphics = new System.Windows.Forms.Label();
