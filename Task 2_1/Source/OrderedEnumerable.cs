@@ -9,7 +9,6 @@ namespace Block2_1
     {
         internal static TSource[] ToBuffer<TSource>(this IEnumerable<TSource> source, out int count)
         {
-            // Optimize for ICollection<T>
             ICollection<TSource> collection = source as ICollection<TSource>;
             if (collection != null)
             {
@@ -19,12 +18,10 @@ namespace Block2_1
                 return tmp;
             }
 
-            // We'll have to loop through, creating and copying arrays as we go
             TSource[] ret = new TSource[16];
             int tmpCount = 0;
             foreach (TSource item in source)
-            {
-                // Need to expand...
+            { 
                 if (tmpCount == ret.Length)
                 {
                     Array.Resize(ref ret, ret.Length * 2);
@@ -214,8 +211,6 @@ namespace Block2_1
                 {
                     int pivot = left + (right - left) / 2;
                     int pivotPosition = Partition(indexes, keys, left, right, pivot);
-                    // Push the right sublist first, so that we *pop* the
-                    // left sublist first
                     stack.Push(new LeftRight(pivotPosition + 1, right));
                     stack.Push(new LeftRight(left, pivotPosition - 1));
                 }
@@ -241,12 +236,10 @@ namespace Block2_1
         }
 
         private int Partition(int[] indexes, TCompositeKey[] keys, int left, int right, int pivot)
-        {
-            // Remember the current index (into the keys/elements arrays) of the pivot location
+        {           
             int pivotIndex = indexes[pivot];
             TCompositeKey pivotKey = keys[pivotIndex];
 
-            // Swap the pivot value to the end
             indexes[pivot] = indexes[right];
             indexes[right] = pivotIndex;
             int storeIndex = left;
@@ -257,13 +250,11 @@ namespace Block2_1
                 int comparison = compositeComparer.Compare(candidateKey, pivotKey);
                 if (comparison < 0 || (comparison == 0 && candidateIndex < pivotIndex))
                 {
-                    // Swap storeIndex with the current location
                     indexes[i] = indexes[storeIndex];
                     indexes[storeIndex] = candidateIndex;
                     storeIndex++;
                 }
             }
-            // Move the pivot to its final place
             int tmp = indexes[storeIndex];
             indexes[storeIndex] = indexes[right];
             indexes[right] = tmp;
