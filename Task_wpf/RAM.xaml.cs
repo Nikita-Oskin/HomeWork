@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 namespace pcshop_wpf
 {
     /// <summary>
-    /// Логика взаимодействия для RAM.xaml
+    /// Interaction logic for RAM.xaml
     /// </summary>
     public partial class RAM : Window
     {
