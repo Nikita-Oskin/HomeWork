@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 namespace pcshop_wpf
 {
     /// <summary>
-    /// Логика взаимодействия для Motherboards.xaml
+    /// Interaction logic for Motherboards.xaml
     /// </summary>
     public partial class Motherboards : Window
     {
