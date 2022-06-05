@@ -15,7 +15,7 @@ namespace Block2_2
             object[] c = char_;
             try
             {
-                c[1] = 50; // adding money
+                c[1] = 50; 
                 Console.WriteLine(c[1]);
             }
             catch (ArrayTypeMismatchException exc)
