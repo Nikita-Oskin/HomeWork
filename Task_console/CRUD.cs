@@ -57,7 +57,7 @@ namespace pcshop_console
 
             cpu.SelectProcessors(conn);
 
-            Console.WriteLine("Какую действию хотите выполнить?");
+            Console.WriteLine("Какие действия хотите выполнить?");
             Console.WriteLine("Добавить(I) | Изменить(U) | Удалить(D) | Назад(B)");
             string query = Console.ReadLine();
             Console.Clear();
@@ -98,7 +98,7 @@ namespace pcshop_console
 
             mb.SelectMotherboards(conn);
 
-            Console.WriteLine("Какую действию хотите выполнить?");
+            Console.WriteLine("Какие действия хотите выполнить?");
             Console.WriteLine("Добавить(I) | Изменить(U) | Удалить(D) | Назад(B)");
             string query = Console.ReadLine();
             Console.Clear();
@@ -139,7 +139,7 @@ namespace pcshop_console
 
             ram.SelectRam(conn);
 
-            Console.WriteLine("Какую действию хотите выполнить?");
+            Console.WriteLine("Какие действия хотите выполнить?");
             Console.WriteLine("Добавить(I) | Изменить(U) | Удалить(D) | Назад(B)");
             string query = Console.ReadLine();
             Console.Clear();
@@ -180,7 +180,7 @@ namespace pcshop_console
 
             vc.SelectVideocards(conn);
 
-            Console.WriteLine("Какую действию хотите выполнить?");
+            Console.WriteLine("Какие действия хотите выполнить?");
             Console.WriteLine("Добавить(I) | Изменить(U) | Удалить(D) | Назад(B)");
             string query = Console.ReadLine();
             Console.Clear();
@@ -221,7 +221,7 @@ namespace pcshop_console
 
             vc.SelectSSD_Drivers(conn);
 
-            Console.WriteLine("Какую действию хотите выполнить?");
+            Console.WriteLine("Какие действия хотите выполнить?");
             Console.WriteLine("Добавить(I) | Изменить(U) | Удалить(D) | Назад(B)");
             string query = Console.ReadLine();
             Console.Clear();
