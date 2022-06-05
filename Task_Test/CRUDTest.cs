@@ -7,11 +7,11 @@ namespace pcshop.Tests
 {
     public class CRUDTest
     {
-        // Для теста у нас есть тестовая таблица в БД (TestTable)
-        // Все наши запросы добавления, изменения и удаления проверяем в тестовой таблице чтобы не испортить нужные
-        // Работы с тестовой таблицой и остальными одинаково.
+        // For the test, we have a test table in the database (TestTable)
+        // We check all our add, change, and delete requests in a test table so as not to spoil the necessary
+        // Work with the test table and the rest is the same.
 
-        // Используем один тестовый проект, так как логика для всех 3х приложении одинокова
+        // We use one test project, since the logic for all 3 applications is the same
 
         pcshop.CRUD dl;
         pcshop_wpf.CRUD dl_wpf;
@@ -26,7 +26,7 @@ namespace pcshop.Tests
         }
 
 
-        // Проверка подключения
+        // connection test
         [Test]
         public void ConnectTest()
         {
@@ -39,7 +39,7 @@ namespace pcshop.Tests
             Assert.IsTrue(IsConnect_wpf);
         }
 
-        // Проверка отключения
+        // shutdown test
         [Test]
         public void DisconnectTest()
         {
@@ -53,7 +53,7 @@ namespace pcshop.Tests
         }
 
 
-        // Проверяем добавляется ли данные в талицу, если успешно то результатом будет вывод сообщения "Добавлено"
+        // We check whether data is added to the table, if successful, the result will be the output of the message "Added"
         [Test]
         public void InsertTest()
         {
@@ -63,10 +63,10 @@ namespace pcshop.Tests
             cmd.CommandText = query;
             string ret = dl.custominsertupdatedelete(cmd);
 
-            Assert.AreEqual("Добавлено", ret);
+            Assert.AreEqual("Г„Г®ГЎЕ•ГўГ«ДєГ­Г®", ret);
         }
 
-        // Првоеряем изменяется ли данные в таблице, если успешно то результатом будет вывод сообщения "Изменено"
+        // We check whether the data in the table changes, if successful, the result will be the output of the message "Changed"
         [Test]
         public void UpdateTest()
         {
@@ -76,11 +76,11 @@ namespace pcshop.Tests
             cmd.CommandText = query;
             string ret = dl.custominsertupdatedelete(cmd);
 
-            Assert.AreEqual("Изменено", ret);
+            Assert.AreEqual("ДЊГ§Д›ДєГ­ДєГ­Г®", ret);
         }
 
 
-        // Проверяем удаляется ли данные в таблице, если успешно то результатом будет вывод сообщения "Удалено"
+        // We check whether the data in the table is deleted, if successful, the result will be the output of the message "Deleted"
         [Test]
         public void DeleteTest()
         {
@@ -90,7 +90,7 @@ namespace pcshop.Tests
             cmd.CommandText = query;
             string ret = dl.custominsertupdatedelete(cmd);
 
-            Assert.AreEqual("Удалено", ret);
+            Assert.AreEqual("Г“Г¤Е•Г«ДєГ­Г®", ret);
         }
     }
 }
