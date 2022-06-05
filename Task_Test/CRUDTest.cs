@@ -63,7 +63,7 @@ namespace pcshop.Tests
             cmd.CommandText = query;
             string ret = dl.custominsertupdatedelete(cmd);
 
-            Assert.AreEqual("Äîáŕâëĺíî", ret);
+            Assert.AreEqual("Added", ret);
         }
 
         // We check whether the data in the table changes, if successful, the result will be the output of the message "Changed"
@@ -76,7 +76,7 @@ namespace pcshop.Tests
             cmd.CommandText = query;
             string ret = dl.custominsertupdatedelete(cmd);
 
-            Assert.AreEqual("Čçěĺíĺíî", ret);
+            Assert.AreEqual("Changed", ret);
         }
 
 
@@ -90,7 +90,7 @@ namespace pcshop.Tests
             cmd.CommandText = query;
             string ret = dl.custominsertupdatedelete(cmd);
 
-            Assert.AreEqual("Óäŕëĺíî", ret);
+            Assert.AreEqual("Deleted", ret);
         }
     }
 }
