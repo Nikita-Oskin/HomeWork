@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 namespace pcshop_wpf
 {
     /// <summary>
-    /// Логика взаимодействия для Videocards.xaml
+    /// Interaction logic for Videocards.xaml
     /// </summary>
     public partial class Videocards : Window
     {
