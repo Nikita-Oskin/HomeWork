@@ -32,8 +32,7 @@ namespace Block2_3
         private int Sorting(int left, int right)
         {
             var pointer = left;
-
-            // Опорный элемент находится под Right-адресом.
+            
             for (int i = left; i <= right; i++)
             {
                 if (Compare(Items[i], Items[right]) == -1)
