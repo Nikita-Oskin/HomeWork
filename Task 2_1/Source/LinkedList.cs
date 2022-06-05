@@ -291,7 +291,7 @@ namespace Block2_1
 
             if (index < 0 || index > array.Length)
             {
-                throw new ArgumentOutOfRangeException("аргумента находится вне диапазона допустимых значений");
+                throw new ArgumentOutOfRangeException("аргумент находится вне диапазона допустимых значений");
             }
 
             if (array.Length - index < Count)
