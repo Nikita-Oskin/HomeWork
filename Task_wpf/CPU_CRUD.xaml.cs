@@ -17,7 +17,7 @@ using System.Data.SqlClient;
 namespace pcshop_wpf
 {
     /// <summary>
-    /// Логика взаимодействия для CPU_CRUD.xaml
+    /// Interaction logic for CPU_CRUD.xaml
     /// </summary>
     public partial class CPU_CRUD : Window
     {
