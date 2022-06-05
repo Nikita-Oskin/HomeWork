@@ -9,7 +9,7 @@ using System.Windows;
 namespace pcshop_wpf
 {
     /// <summary>
-    /// Логика взаимодействия для App.xaml
+    /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
