@@ -1,0 +1,65 @@
+.container{
+    width: 70%;
+}
+
+.center {
+    margin:auto;
+    
+}
+
+table { 
+    
+    border: 4px double black; 
+    border-collapse: collapse; 
+   }
+   th { 
+
+
+
+    border: 1px solid black; 
+   }
+   td { 
+ 
+    border: 1px solid black; 
+   }
+ 
+.Sam {
+    float: right;
+
+}
+
+.Landing {
+    float: right;
+}
+
+.Street {
+    float: right;
+}
+
+.Sputnik {
+    float: right;
+}
+
+.Park {
+    float: right;
+}
+
+.Channel {
+    float: right;
+}
+
+.Complex {
+    float: right;
+}
+
+.Space {
+    float: right;
+}
+
+.Map {
+    float: right;
+}
+
+.Melcher {
+    float: right;
+}
